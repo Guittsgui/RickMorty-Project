@@ -8,17 +8,17 @@ const eyeImg = document.querySelector('.eyeImg').addEventListener('click',flipPa
 const inputNameR = document.querySelector('.inputNameR')
 const inputEmailR = document.querySelector('.inputEmailR')
 const inputSenhaR = document.querySelector('.inputSenhaR')
-
-
-
-
-
+const btRegister = document.querySelector('.btRegisterAction').addEventListener('click', verifyRegister)
 
 
 
 
 //FUNCTIONS
+function verifyRegister(){
+    
 
+
+}
 
 function flipMenu(e){
     const clicked = e.target
@@ -30,25 +30,26 @@ function flipMenu(e){
         if(clicked.classList.contains('Login')){
             containerLogin.style.display = 'flex'
             containerRegister.style.display = 'none'
+            clearFields()
         }else{
             containerLogin.style.display = 'none'
             containerRegister.style.display = 'flex'
+            clearFields()
         }
     }
 }
-
-
-
-
-
-
-
 function flipPassword(){
     console.log('ta aqui')
     console.log(inputSenhaR.type)
     if ( inputSenhaR.type == 'password'){
-        inputSenhaR.type = 'text'
+        inputSenhaR.type = 'text'        
     }else{
-        inputSenhaR.type = 'password'
+        inputSenhaR.type = 'password'  
     }
+}
+
+function clearFields(){
+    inputNameR.value = ''
+    inputEmailR.value = ''
+    inputSenhaR.value = ''
 }
