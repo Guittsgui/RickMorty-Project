@@ -12,11 +12,17 @@ const btRegister = document.querySelector('.btRegisterAction').addEventListener(
 const msgRegister = document.querySelector('.msgRegister')
 
 
+///// VARIAVEIS P/ SIMULAR LOGIN
+const listaUsers = []
+const userLogado = ''
+
 
 
 //FUNCTIONS
-function verifyRegister(){
+function verifyRegister(e){
     
+    e.preventDefault()
+
     if( inputNameR.value.length < 3){
         let msg = 'Name: Min 03 caracteres'
         showErrorMsg(inputNameR,msg)
@@ -28,16 +34,21 @@ function verifyRegister(){
         return
     }
     if (inputSenhaR.value.length < 5){
-        let msg = 'Senha: Min 03 caracteres'
+        let msg = 'Senha: Min 05 caracteres'
         showErrorMsg(inputSenhaR,msg)
+        return
     }
-
-    //validaSenha
-    //validaLista
-
+    if(hasEmail()){
+        let msg = 'Email já cadastrado'
+        showErrorMsg(inputEmailR,msg)
+        return
+    }
+    const user = createUser(inputNameR.value, inputEmailR.value,inputSenhaR.value)
+    listaUsers.push(user)
+    clearFields()
+    showAcceptMsg()
 
 }
-
 function flipMenu(e){
     const clicked = e.target
     if ( clicked.classList.contains('nav')){
@@ -66,16 +77,22 @@ function flipPassword(){
     }
 }
 function showErrorMsg(input,msg){
-    console.log('ol')
     input.style.borderColor = 'red'
     msgRegister.innerHTML = msg
     msgRegister.style.color = 'red'
+    input.value = ''
     setTimeout(() => {
         input.style.borderColor = 'black'
         msgRegister.innerHTML = ''
     }, 1500);
 }
-
+function showAcceptMsg(user){
+    msgRegister.style.color = 'green'
+    msgRegister.innerHTML = 'Usuário Cadastrado com Sucesso'
+    setTimeout(() => {
+        msgRegister.innerHTML = ''
+    }, 1500);
+}
 function isEmailValid(){
     const emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)
     if (emailRegex.test(inputEmailR.value)){
@@ -84,9 +101,29 @@ function isEmailValid(){
         return false
     }
 }
-
 function clearFields(){
     inputNameR.value = ''
     inputEmailR.value = ''
     inputSenhaR.value = ''
+}
+function hasEmail(){
+    let has = listaUsers.find((i)=>{
+        return i.email === inputEmailR.value
+    })
+    return has
+}
+
+
+// Classes
+class User {
+    constructor(name,email,login){
+        this.name = name
+        this.email = email
+        this.login = login
+    }
+}
+// Funcoes Construtoras
+function createUser(name,email,login){
+    const u = new User(name,email,login)
+    return u
 }
