@@ -9,6 +9,7 @@ const inputNameR = document.querySelector('.inputNameR')
 const inputEmailR = document.querySelector('.inputEmailR')
 const inputSenhaR = document.querySelector('.inputSenhaR')
 const btRegister = document.querySelector('.btRegisterAction').addEventListener('click', verifyRegister)
+const msgRegister = document.querySelector('.msgRegister')
 
 
 
@@ -16,6 +17,23 @@ const btRegister = document.querySelector('.btRegisterAction').addEventListener(
 //FUNCTIONS
 function verifyRegister(){
     
+    if( inputNameR.value.length < 3){
+        let msg = 'Name: Min 03 caracteres'
+        showErrorMsg(inputNameR,msg)
+        return
+    }
+    if (!isEmailValid()){
+        let msg = 'Insira um Email válido'
+        showErrorMsg(inputEmailR,msg)
+        return
+    }
+    if (inputSenhaR.value.length < 5){
+        let msg = 'Senha: Min 03 caracteres'
+        showErrorMsg(inputSenhaR,msg)
+    }
+
+    //validaSenha
+    //validaLista
 
 
 }
@@ -45,6 +63,25 @@ function flipPassword(){
         inputSenhaR.type = 'text'        
     }else{
         inputSenhaR.type = 'password'  
+    }
+}
+function showErrorMsg(input,msg){
+    console.log('ol')
+    input.style.borderColor = 'red'
+    msgRegister.innerHTML = msg
+    msgRegister.style.color = 'red'
+    setTimeout(() => {
+        input.style.borderColor = 'black'
+        msgRegister.innerHTML = ''
+    }, 1500);
+}
+
+function isEmailValid(){
+    const emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)
+    if (emailRegex.test(inputEmailR.value)){
+        return true
+    }else{
+        return false
     }
 }
 
