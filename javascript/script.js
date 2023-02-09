@@ -48,8 +48,6 @@ function verifyRegister(e){
     listaUsers.push(user)
     clearFields()
     showAcceptMsg()
-
-   // window.location.href = "pages/home.html"
 }
 function verifyLogin(e){  
     e.preventDefault()
