@@ -10,11 +10,14 @@ const inputEmailR = document.querySelector('.inputEmailR')
 const inputSenhaR = document.querySelector('.inputSenhaR')
 const btRegister = document.querySelector('.btRegisterAction').addEventListener('click', verifyRegister)
 const msgRegister = document.querySelector('.msgRegister')
-
+const msgLogin = document.querySelector('.msgLogin')
+const inputEmailL= document.querySelector('.inputEmailL')
+const inputSenhaL = document.querySelector('.inputSenhaL')
+const btLogin = document.querySelector('.btLoginAction').addEventListener('click',verifyLogin)
 
 ///// VARIAVEIS P/ SIMULAR LOGIN
 const listaUsers = []
-const userLogado = ''
+let userLogado 
 
 
 
@@ -38,7 +41,7 @@ function verifyRegister(e){
         showErrorMsg(inputSenhaR,msg)
         return
     }
-    if(hasEmail()){
+    if(hasEmail(inputEmailR.value)){
         let msg = 'Email já cadastrado'
         showErrorMsg(inputEmailR,msg)
         return
@@ -47,8 +50,31 @@ function verifyRegister(e){
     listaUsers.push(user)
     clearFields()
     showAcceptMsg()
+}
+
+
+function verifyLogin(){
+
+    userLogado = listaUsers.find((i) => {
+        return i.email == inputEmailL.value && i.password == inputSenhaL.value
+    })
+    let msg
+    if (hasEmail(inputEmailL.value)){
+        msg = 'Senha Inválida'
+    }else{
+        msg = 'Usuário Não Encontrado'
+    }
+    if(!userLogado){
+        clearFields()
+        msgLogin.innerText = msg
+        setTimeout(() => {
+            msgLogin.innerText = ''
+        }, 1500);
+        return
+    }
 
 }
+
 function flipMenu(e){
     const clicked = e.target
     if ( clicked.classList.contains('nav')){
@@ -105,25 +131,25 @@ function clearFields(){
     inputNameR.value = ''
     inputEmailR.value = ''
     inputSenhaR.value = ''
+    inputEmailL.value = ''
+    inputSenhaL.value = ''
 }
-function hasEmail(){
+function hasEmail(email){
     let has = listaUsers.find((i)=>{
-        return i.email === inputEmailR.value
+        return i.email === email
     })
     return has
 }
-
-
 // Classes
 class User {
-    constructor(name,email,login){
+    constructor(name,email,password){
         this.name = name
         this.email = email
-        this.login = login
+        this.password = password
     }
 }
 // Funcoes Construtoras
-function createUser(name,email,login){
-    const u = new User(name,email,login)
+function createUser(name,email,password){
+    const u = new User(name,email,password)
     return u
 }

@@ -124,7 +124,7 @@ input:focus{
     align-items: center;
     justify-content: center;
 }
-.msgRegisterBox{
+.msgRegisterBox,.msgLoginBox{
     height: 60px;
     display: flex;
     align-items: center;
@@ -143,4 +143,7 @@ input:focus{
 }
 .msgRegister{
     font-weight: bold;
+}
+.msgLogin{
+    color: red
 }
