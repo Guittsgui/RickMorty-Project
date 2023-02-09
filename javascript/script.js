@@ -22,10 +22,8 @@ let userLogado
 
 
 //FUNCTIONS
-function verifyRegister(e){
-    
+function verifyRegister(e){ 
     e.preventDefault()
-
     if( inputNameR.value.length < 3){
         let msg = 'Name: Min 03 caracteres'
         showErrorMsg(inputNameR,msg)
@@ -52,9 +50,7 @@ function verifyRegister(e){
     showAcceptMsg()
 }
 
-
 function verifyLogin(){
-
     userLogado = listaUsers.find((i) => {
         return i.email == inputEmailL.value && i.password == inputSenhaL.value
     })
@@ -72,7 +68,6 @@ function verifyLogin(){
         }, 1500);
         return
     }
-
 }
 
 function flipMenu(e){
@@ -93,6 +88,7 @@ function flipMenu(e){
         }
     }
 }
+
 function flipPassword(){
     console.log('ta aqui')
     console.log(inputSenhaR.type)
@@ -112,6 +108,7 @@ function showErrorMsg(input,msg){
         msgRegister.innerHTML = ''
     }, 1500);
 }
+
 function showAcceptMsg(user){
     msgRegister.style.color = 'green'
     msgRegister.innerHTML = 'Usuário Cadastrado com Sucesso'
@@ -119,6 +116,7 @@ function showAcceptMsg(user){
         msgRegister.innerHTML = ''
     }, 1500);
 }
+
 function isEmailValid(){
     const emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)
     if (emailRegex.test(inputEmailR.value)){
@@ -127,6 +125,7 @@ function isEmailValid(){
         return false
     }
 }
+
 function clearFields(){
     inputNameR.value = ''
     inputEmailR.value = ''
@@ -134,6 +133,7 @@ function clearFields(){
     inputEmailL.value = ''
     inputSenhaL.value = ''
 }
+
 function hasEmail(email){
     let has = listaUsers.find((i)=>{
         return i.email === email
