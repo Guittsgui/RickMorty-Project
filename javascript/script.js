@@ -48,9 +48,11 @@ function verifyRegister(e){
     listaUsers.push(user)
     clearFields()
     showAcceptMsg()
-}
 
-function verifyLogin(){  
+   // window.location.href = "pages/home.html"
+}
+function verifyLogin(e){  
+    e.preventDefault()
     userLogado = listaUsers.find((i) => {
         return i.email == inputEmailL.value && i.password == inputSenhaL.value
     })
@@ -68,7 +70,7 @@ function verifyLogin(){
         }, 1500);
         return
     }
-    alert('logoooooooou')
+    window.location.href = "pages/home.html"
 }
 
 function flipMenu(e){
