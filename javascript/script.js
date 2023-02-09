@@ -50,7 +50,7 @@ function verifyRegister(e){
     showAcceptMsg()
 }
 
-function verifyLogin(){
+function verifyLogin(){  
     userLogado = listaUsers.find((i) => {
         return i.email == inputEmailL.value && i.password == inputSenhaL.value
     })
@@ -68,6 +68,7 @@ function verifyLogin(){
         }, 1500);
         return
     }
+    alert('logoooooooou')
 }
 
 function flipMenu(e){
@@ -140,6 +141,7 @@ function hasEmail(email){
     })
     return has
 }
+
 // Classes
 class User {
     constructor(name,email,password){

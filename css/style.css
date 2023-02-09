@@ -61,6 +61,7 @@ input:focus{
 .leftSideTitle h2{
     font-size: 20px;
     color: blueviolet;
+    margin-top: -10px;
 }
 .lefSideText{
     flex: 1 ;
@@ -72,6 +73,7 @@ input:focus{
     line-height: 25px;
     text-indent: 25px;
     text-align: justify;
+   
 }
 /* RIGHT SIDE REGISTER BOX */
 
@@ -87,15 +89,15 @@ input:focus{
     color: black;
     
 }
-.rightSideRegister h2, .rightSideLogin h2 {
+.containerPrincipal h2{
     margin-bottom: 20px;
 }
-.rightSideRegister form, .rightSideLogin form{
+.containerPrincipal form{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.rightSideRegister input, .rightSideLogin input{
+.containerPrincipal input{
     width: 300px;
     height: 30px;
     border-radius: 10px;
@@ -103,12 +105,14 @@ input:focus{
     text-align: center;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.712);
 }
-.rightSideRegister button, .rightSideLogin button{
+
+.containerPrincipal button{
     width: 120px;
     height: 40px;
     border-radius: 30px;
 }
-.rightSideRegister button:hover,.rightSideLogin button:hover{
+
+.containerPrincipal button:hover{
     cursor: pointer;
     background-color: rgba(172, 255, 47, 0.712);
     color: white;
