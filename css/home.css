@@ -199,6 +199,60 @@ nav a:hover, .ativado{
 .trailerBox{
     height: 400px;
 }
+
+.dados{
+    height: 600px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.dados h1{
+    font-size: 50px;
+}
+.dadosCima{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    padding: 30px;
+}
+.dadosCima img{
+    width: 400px;
+    height: 200px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.dadosBaixo{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.boxInfoSerie{
+    height: 200px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: lightgray;
+    border-right: 1px solid lightgray;   
+}
+.boxInfoSerie:last-child{
+    border-right: none;
+}
+.boxInfoSerie h1{
+    font-size: 70px;
+    
+    text-shadow: 1px 1px 1px white;
+}
+.boxInfoSerie h2{
+    font-size: 30px;
+    border-bottom: 4px solid greenyellow;
+    margin-bottom: 10px;
+}
+
 footer{
     height: 200px;
     background-color: black;
