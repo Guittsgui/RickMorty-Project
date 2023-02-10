@@ -52,8 +52,11 @@ nav a:hover, .ativado{
     align-items: center;
     justify-content: center;
 }
+.menuUser img{
+    cursor: pointer;
+}
 .menuNavigator a{
-    margin: 0 30px;
+    margin: 0 15px;
 }
 .headTitle{
     color: white;
@@ -134,12 +137,69 @@ nav a:hover, .ativado{
 }
 
 .conteudoEpisodios{
-    height: 600px;
+    height: 500px;
     background-image: url('https://img.elo7.com.br/product/zoom/3613E17/papel-de-parede-rick-and-morty-colocar-papel-de-parede.jpg');
     background-position: center;
     background-size: cover;
 }
 .opacity{
-    height: 600px;
-    background-color: rgba(0, 0, 0, 0.664);
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.774);
+    color: white;
+}
+.opacity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.opacity h1{
+    font-size: 85px;
+    text-shadow: 2px 2px 2px black;
+}
+.opacity h2{
+    font-size: 75px;
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: 20px;
+}
+.opacity p {
+    text-align:justify;
+}
+.texto{
+    text-align: center;
+    width: 600px;
+}
+.opacity button{
+    height: 60px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 80px 40px 40px 0;
+    border-color: black;
+    background-color: rgb(253, 93, 120);
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+.opacity button:hover{
+    background-color: rgb(255, 143, 161);
+}
+.trailer{
+    background-color: rgb(1, 1, 70);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.trailer h1{
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+.trailerBox{
+    width: 9000px;
+    height: 400px;
+}
+footer{
+    height: 300px;
+    background-color: black;
 }
