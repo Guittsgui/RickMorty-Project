@@ -109,7 +109,7 @@ nav a:hover, .ativado{
     background-image: url('https://w0.peakpx.com/wallpaper/723/115/HD-wallpaper-tv-show-morty-smith-rick-sanchez-rick-and-morty-in-purple-background-with-stars-movies.jpg');
     background-position:center;
     background-size: cover;
-    width: 500px;
+    min-width: 400px;
     height: 300px;
     box-shadow: 2px 2px 2px black;
 }
@@ -131,4 +131,15 @@ nav a:hover, .ativado{
 }
 .c1Title p{
     line-height: 30px;
+}
+
+.conteudoEpisodios{
+    height: 600px;
+    background-image: url('https://img.elo7.com.br/product/zoom/3613E17/papel-de-parede-rick-and-morty-colocar-papel-de-parede.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.opacity{
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.664);
 }
