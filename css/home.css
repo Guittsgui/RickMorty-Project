@@ -255,7 +255,6 @@ nav a:hover, .ativado{
 }
 
 footer{
-    height: 200px;
     background-color: black;
     color: white;
     display: flex;
@@ -263,6 +262,7 @@ footer{
     justify-content: center;
     flex-direction: row;
     flex-direction: column;
+    padding: 30px;
 }
 footer p{
     letter-spacing: 5px;
@@ -272,4 +272,31 @@ footer img{
 }
 footer img:hover{
     border-bottom: 1px solid white;
+}
+.techBox{
+    padding: 20px;
+}
+.techBox p {
+    color: rgb(226, 43, 195);
+}
+.techBox img{
+    cursor: pointer;
+    height: 40px;
+}
+.apiConsumida{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.apiConsumida a{
+    margin-top: 20px;
+    color: greenyellow;
+    text-decoration: none;
+    border: 1px solid greenyellow;
+    padding: 10px;
+}
+.apiConsumida a:hover{
+    color: lightgreen;
+    border: 1px solid lightgreen;
 }
