@@ -29,7 +29,7 @@ input:focus{
 /* LEFT SIDE */
 .leftSide{
     flex: 1;
-    background-color: rgba(0, 0, 0, 0.815);
+    background-color: rgba(0, 0, 0, 0.911);
     display: flex;
     flex-direction: column;
     padding: 15px;
@@ -57,11 +57,13 @@ input:focus{
 .leftSideTitle h1{
     font-size: 50px;
     color: greenyellow;
+    text-shadow: 2px 2px 2px white;
 }
 .leftSideTitle h2{
     font-size: 20px;
     color: blueviolet;
     margin-top: -10px;
+    text-shadow: 1px 1px 1px white;
 }
 .lefSideText{
     flex: 1 ;
