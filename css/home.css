@@ -248,7 +248,10 @@ nav a:hover, .ativado{
 .opacityUserInfo{
     height: 600px;
     background-color: rgba(0, 0, 0, 0.568);
-
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer{
