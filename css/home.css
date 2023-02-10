@@ -1,0 +1,134 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;  
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainContainer{
+    max-width: 1200px;
+    margin: auto;
+    background-color: gray;
+}
+header{
+    background-image: url('https://images3.alphacoders.com/812/812062.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav a{
+    color:  white;
+    text-decoration: none;
+    font-size: 15px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+nav a:hover, .ativado{
+    color: blueviolet;
+    border-color: blueviolet;
+}
+.menuUser{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menuNavigator a{
+    margin: 0 30px;
+}
+.headTitle{
+    color: white;
+    font-weight: bolder;
+    width: 600px;
+    margin: auto;
+    padding: 20px;  
+    display: flex;
+    flex-direction: column;
+}
+.headTitle h1{
+    font-size: 60px;
+    margin: 10px 0;
+    text-shadow: 2px 2px 2px black;
+}
+.headTitle h2{
+    font-size: 40px ;
+    text-shadow: 2px 2px 2px black;
+}
+.headTitle p{
+    font-size: 20px ;
+    text-shadow: 2px 2px 2px black;
+}
+.headTitle button{
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    border-color: black;
+    border-radius: 20px;
+    background-color: rgb(137, 43, 226);
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.678);
+    justify-content: center;
+    align-items: center;
+}
+.headTitle button:hover{
+    background-color: rgb(162, 81, 238);
+}
+.conteudo1{
+    height: 500px;
+    background-color: rgb(1, 1, 70);
+    display: flex;
+}
+.c1Img{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imgBox{
+    background-image: url('https://w0.peakpx.com/wallpaper/723/115/HD-wallpaper-tv-show-morty-smith-rick-sanchez-rick-and-morty-in-purple-background-with-stars-movies.jpg');
+    background-position:center;
+    background-size: cover;
+    width: 500px;
+    height: 300px;
+    box-shadow: 2px 2px 2px black;
+}
+.c1Title{
+    flex: 1;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-indent: 40px;
+    text-align: center;
+}
+.c1Title h1{
+    margin-bottom: 40px;
+    font-size: 60px;
+    text-shadow: 3px 3px 3px black;
+}
+.c1Title p{
+    line-height: 30px;
+}
