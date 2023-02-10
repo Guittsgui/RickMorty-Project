@@ -209,6 +209,8 @@ nav a:hover, .ativado{
 }
 .dados h1{
     font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 2px greenyellow;
 }
 .dadosCima{
     display: flex;
