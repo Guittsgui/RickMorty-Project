@@ -183,22 +183,7 @@ nav a:hover, .ativado{
 .opacity button:hover{
     background-color: rgb(255, 143, 161);
 }
-.trailer{
-    background-color: rgb(1, 1, 70);
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.trailer h1{
-    margin-bottom: 15px;
-    font-size: 40px;
-    color: white;
-}
-.trailerBox{
-    height: 400px;
-}
+
 
 .dados{
     height: 600px;
@@ -254,6 +239,17 @@ nav a:hover, .ativado{
     border-bottom: 4px solid greenyellow;
     margin-bottom: 10px;
 }
+.userInfo{
+    height: 600px;
+    background-image: url('https://i0.wp.com/www.fatosdesconhecidos.com.br/wp-content/uploads/2018/01/rick_and_morty_by_sawuinhaff-da64e7y.png?fit=1280%2C750&ssl=1');
+    background-position: center;
+    background-size: cover;
+}
+.opacityUserInfo{
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.568);
+
+}
 
 footer{
     height: 200px;
@@ -270,4 +266,7 @@ footer p{
 }
 footer img{
     margin: 20px 20px;
+}
+footer img:hover{
+    border-bottom: 1px solid white;
 }
