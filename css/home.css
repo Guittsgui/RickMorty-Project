@@ -97,7 +97,7 @@ nav a:hover, .ativado{
     background-color: rgb(162, 81, 238);
 }
 .conteudo1{
-    height: 500px;
+    height: 600px;
     background-color: black;
     display: flex;
 }
@@ -112,8 +112,8 @@ nav a:hover, .ativado{
     background-image: url('https://w0.peakpx.com/wallpaper/723/115/HD-wallpaper-tv-show-morty-smith-rick-sanchez-rick-and-morty-in-purple-background-with-stars-movies.jpg');
     background-position:center;
     background-size: cover;
-    min-width: 400px;
-    height: 300px;
+    min-width: 600px;
+    height: 400px;
     box-shadow: 2px 2px 2px black;
 }
 .c1Title{
@@ -129,11 +129,18 @@ nav a:hover, .ativado{
 }
 .c1Title h1{
     margin-bottom: 40px;
-    font-size: 60px;
-    text-shadow: 3px 3px 3px black;
+    font-size: 70px;
+    text-shadow: 3px 3px 3px purple;
+
 }
 .c1Title p{
     line-height: 30px;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.hbo{
+ 
 }
 
 .conteudoEpisodios{
