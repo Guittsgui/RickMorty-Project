@@ -4,27 +4,27 @@ const homepage = document.querySelector('.homepage')
 const personArea = document.querySelector('.personArea')
 const epAction = document.querySelector('.epAction').addEventListener('click',episodiosAction)
 const epArea = document.querySelector('.epArea')
+const epGeral = document.querySelector('.epGeral')
 
 
 function personagemAction(){
     homepage.style.display = 'none'
     personArea.style.display = 'block'
-    epArea.style.display = 'none'
+    epGeral.style.display = 'none'
     window.scrollTo(0, 0)
 }
-
 function episodiosAction(){
     homepage.style.display = 'none'
     personArea.style.display = 'none'
-    epArea.style.display = 'flex'
+    epGeral.style.display = 'flex'
     window.scrollTo(0, 0)
     getEpisodes()
 }
-
 function homeAction(){
     homepage.style.display = 'block'
     personArea.style.display = 'none'
-    epArea.style.display = 'none'
+    epGeral.style.display = 'none'
+    window.scrollTo(0, 0)
 }
 
 

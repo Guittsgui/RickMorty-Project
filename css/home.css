@@ -12,6 +12,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+input:focus{
+    outline: none;
+}
+
 .mainContainer{
     max-width: 1200px;
     margin: auto;
@@ -137,10 +141,6 @@ nav a:hover, .ativado{
     line-height: 30px;
     font-size: 17px;
     letter-spacing: 1px;
-}
-
-.hbo{
- 
 }
 
 .conteudoEpisodios{
@@ -312,14 +312,48 @@ footer img:hover{
     color: white;
     display: none;
 }
+
+
+
 .epArea{
     min-height: 500px;
     background-color: black;
     margin: auto;
     flex-wrap: wrap;
     justify-content: space-around;
-    display: none
+    display: flex;
 }
+
+.epGeral{
+    display: none;
+    flex-direction: column;
+    display: none;
+}
+
+.epGeral nav{
+    height: 350px;
+    background-image: url('https://i0.wp.com/categorianerd.com/wp-content/uploads/2021/04/rick-and-morty-temporada-5-foto-adult-swim-conteudo-categoria-nerd-72204903.jpg?fit=1200%2C675&ssl=1');
+}
+.epOpacity{
+    height: 400px;
+    width: 1200px;
+    background-color: rgba(0, 0, 0, 0.808);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.epOpacity input{
+    margin-bottom: 60px;
+    width: 450px;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+}
+.epOpacity a{
+    margin: 0 15px;
+}
+
 
 .epBox{
     width: 230px;
@@ -335,7 +369,7 @@ footer img:hover{
     align-items: center;
     color: white;
     border: 2px solid white;
-    margin-bottom: 25px;
+    margin: 40px 10px;
 
 }
 .epBox h2{
