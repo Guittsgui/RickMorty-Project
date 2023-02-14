@@ -53,11 +53,28 @@ nav a:hover, .ativado{
 .menuUser{
     width: 200px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .menuUser img{
     cursor: pointer;
+    margin-right: 15px;
+}
+.menuUser a{
+    text-decoration: none;
+    border: none;
+    display: block;
+    color: red;
+    font-size: 15px;
+    text-shadow: 2px 2px 2px black;
+}
+.menuinfos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aquamarine;
+    text-shadow: 2px 2px 2px black;
 }
 .menuNavigator a{
     margin: 0 15px;
@@ -335,7 +352,7 @@ footer img:hover{
     background-image: url('https://i0.wp.com/categorianerd.com/wp-content/uploads/2021/04/rick-and-morty-temporada-5-foto-adult-swim-conteudo-categoria-nerd-72204903.jpg?fit=1200%2C675&ssl=1');
 }
 .epOpacity{
-    height: 400px;
+    height: 350px;
     width: 1200px;
     background-color: rgba(0, 0, 0, 0.808);
     display: flex;
