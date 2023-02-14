@@ -15,7 +15,7 @@ body{
 .mainContainer{
     max-width: 1200px;
     margin: auto;
-    background-color: gray;
+    background-color: black;
 }
 header{
     background-image: url('https://images3.alphacoders.com/812/812062.png');
@@ -306,4 +306,42 @@ footer img:hover{
 .apiConsumida a:hover{
     color: lightgreen;
     border: 1px solid lightgreen;
+}
+.personArea {
+    min-height: 500px;
+    color: white;
+    display: none;
+}
+.epArea{
+    min-height: 500px;
+    width: 800px;
+    background-color: black;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.epBox{
+    width: 230px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(14,65,4,1) 0%, rgba(97,13,56,1) 100%);
+    padding: 20px;
+    color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 2px solid white;
+    margin-bottom: 20px;
+}
+.epBox h2{
+    margin-bottom: 10px;
+    color: greenyellow;
+    text-shadow: 2px 2px 2px black;
+}
+.epBox h3{
+    color: rgb(160, 87, 230);
+    text-shadow: 2px 2px 2px black;
 }
