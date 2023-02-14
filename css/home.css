@@ -15,7 +15,7 @@ body{
 .mainContainer{
     max-width: 1200px;
     margin: auto;
-    background-color: black;
+    background-color: rgb(199, 199, 199);
 }
 header{
     background-image: url('https://images3.alphacoders.com/812/812062.png');
@@ -314,11 +314,11 @@ footer img:hover{
 }
 .epArea{
     min-height: 500px;
-    width: 800px;
     background-color: black;
     margin: auto;
     flex-wrap: wrap;
     justify-content: space-around;
+    display: none
 }
 
 .epBox{
@@ -326,6 +326,7 @@ footer img:hover{
     height: 150px;
     background: radial-gradient(circle, rgba(14,65,4,1) 0%, rgba(97,13,56,1) 100%);
     padding: 20px;
+    margin: 0 20px;
     color: black;
     border-radius: 20px;
     display: flex;
@@ -334,7 +335,8 @@ footer img:hover{
     align-items: center;
     color: white;
     border: 2px solid white;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+
 }
 .epBox h2{
     margin-bottom: 10px;
