@@ -13,7 +13,6 @@ for ( let i of seasonsList){
 const inputEp = document.querySelector('.searchEpName')
 inputEp.addEventListener('input',searchEpInput)
 
-
 function personagemAction(){
     homepage.style.display = 'none'
     personArea.style.display = 'block'
@@ -26,6 +25,7 @@ function episodiosAction(){
     epGeral.style.display = 'flex'
     window.scrollTo(0, 0)
     inputEp.value = ''
+    epArea.innerHTML = ''
     getEpisodes()
 }
 function homeAction(){
@@ -35,7 +35,7 @@ function homeAction(){
     window.scrollTo(0, 0)
 }
 
-
+//// A DIV ESTÁ ADICIONANDO DEPOIS ADICIONA DENOVO.
 async function getEpisodes(){
     let req = await fetch('https://rickandmortyapi.com/api/episode')
     let json = await req.json()
@@ -43,7 +43,7 @@ async function getEpisodes(){
     let json2 = await reqp2.json()
     let reqp3 = await fetch('https://rickandmortyapi.com/api/episode?page=3')
     let json3 = await reqp3.json()
-    let listaGeral = json.results.concat(json2.results, json3.results)
+    listaGeral = json.results.concat(json2.results, json3.results)
     for ( ep of listaGeral){
         const divMaior = document.createElement('div')
         divMaior.classList.add('epBox')
