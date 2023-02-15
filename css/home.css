@@ -19,7 +19,7 @@ input:focus{
 .mainContainer{
     max-width: 1200px;
     margin: auto;
-    background-color: rgb(199, 199, 199);
+    background-color: black;
 }
 header{
     background-image: url('https://images3.alphacoders.com/812/812062.png');
@@ -32,7 +32,7 @@ header{
 }
 nav{
     height: 100px;
-    background-color: rgba(0, 0, 0, 0.767);
+    background-color: rgb(48, 48, 48);
     color: white;
     display: flex;
     align-items: center;

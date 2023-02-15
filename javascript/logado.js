@@ -25,6 +25,7 @@ function episodiosAction(){
     personArea.style.display = 'none'
     epGeral.style.display = 'flex'
     window.scrollTo(0, 0)
+    inputEp.value = ''
     getEpisodes()
 }
 function homeAction(){
@@ -46,7 +47,7 @@ async function getEpisodes(){
     for ( ep of listaGeral){
         const divMaior = document.createElement('div')
         divMaior.classList.add('epBox')
-        divMaior.innerHTML = `<h2>${ep.episode} </h2>  <h3> Nome:</h3> <p>${ep.name}</p> <h3>Lançamento: </h3> <p>${ep.air_date} </p>`
+        divMaior.innerHTML = `<h2>${ep.episode} </h2>  <h3> Nome:</h3> <p class='eptitle'>${ep.name}</p> <h3>Lançamento: </h3> <p>${ep.air_date} </p>`
         epArea.appendChild(divMaior)    
     }
 }
@@ -82,5 +83,18 @@ function filtraSeasons(season){
 }
 
 function searchEpInput(e){
-    console.log(inputEp.value)
+    const epListPosted = document.querySelectorAll('.epBox')
+    for ( let i of epListPosted){
+        let title = i.querySelector('.eptitle').innerText
+        if(title.toLowerCase().includes(inputEp.value.toLowerCase())){
+            i.style.display = 'flex'
+        }else{
+            i.style.display = 'none'
+        }
+    }
+    if (inputEp.value == ''){
+        for( let i of epListPosted){
+            i.style.display == 'flex'
+        }
+    }
 }
