@@ -5,6 +5,11 @@ const personArea = document.querySelector('.personArea')
 const epAction = document.querySelector('.epAction').addEventListener('click',episodiosAction)
 const epArea = document.querySelector('.epArea')
 const epGeral = document.querySelector('.epGeral')
+const seasonsMenu = document.querySelector('.seasonsMenu')
+const seasonsList = seasonsMenu.querySelectorAll('a')
+for ( let i of seasonsList){
+    i.addEventListener('click',navegaSeasons)
+}
 
 
 function personagemAction(){
@@ -28,8 +33,6 @@ function homeAction(){
 }
 
 
-
-
 async function getEpisodes(){
     let req = await fetch('https://rickandmortyapi.com/api/episode')
     let json = await req.json()
@@ -45,3 +48,33 @@ async function getEpisodes(){
         epArea.appendChild(divMaior)    
     }
 }
+
+function navegaSeasons(e){
+    const target = e.target
+    for (let i of seasonsList){
+        i.classList.remove('ativado')
+    }
+    target.classList.add('ativado')
+    let classes = target.classList.value
+    let reduzido = classes.split(' ')
+    let seasonSelected = reduzido[0]
+    filtraSeasons(seasonSelected) 
+}
+
+
+
+function filtraSeasons(season){
+    const epListPosted = document.querySelectorAll('.epBox')
+    for ( let i of epListPosted){
+        i.style.display = 'flex'
+        if ( !i.querySelector('h2').innerText.startsWith(season)){
+            i.style.display = 'none'
+        }              
+    }
+    if (season == 'all'){
+        for(let i of epListPosted){
+            i.style.display = 'flex'
+        }
+    }   
+}
+
