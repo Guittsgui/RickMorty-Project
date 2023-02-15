@@ -15,6 +15,7 @@ const inputEmailL= document.querySelector('.inputEmailL')
 const inputSenhaL = document.querySelector('.inputSenhaL')
 const btLogin = document.querySelector('.btLoginAction').addEventListener('click',verifyLogin)
 
+
 ///// VARIAVEIS P/ SIMULAR LOGIN
 const listaUsers = []
 let userLogado 

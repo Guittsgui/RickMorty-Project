@@ -10,6 +10,8 @@ const seasonsList = seasonsMenu.querySelectorAll('a')
 for ( let i of seasonsList){
     i.addEventListener('click',navegaSeasons)
 }
+const inputEp = document.querySelector('.searchEpName')
+inputEp.addEventListener('input',searchEpInput)
 
 
 function personagemAction(){
@@ -50,6 +52,7 @@ async function getEpisodes(){
 }
 
 function navegaSeasons(e){
+    inputEp.value = ''
     const target = e.target
     for (let i of seasonsList){
         i.classList.remove('ativado')
@@ -78,3 +81,6 @@ function filtraSeasons(season){
     }   
 }
 
+function searchEpInput(e){
+    console.log(inputEp.value)
+}
