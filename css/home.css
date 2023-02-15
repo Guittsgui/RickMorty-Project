@@ -65,9 +65,12 @@ nav a:hover, .ativado{
     text-decoration: none;
     border: none;
     display: block;
-    color: red;
+    color: white;
     font-size: 15px;
     text-shadow: 2px 2px 2px black;
+}
+.menuUser a:hover{
+    color: red;
 }
 .menuinfos{
     display: flex;
